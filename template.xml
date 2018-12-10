@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="3"
+    name="rx + mvvm architecture"
+    description="Creates a Fragment, ViewModel etc.">
+
+    <category value="Other" />
+
+    <parameter
+        id="prefix"
+        name="Prefix identifier"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="Example"
+        help="The prefix id to use for this mvvm template" />
+
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
