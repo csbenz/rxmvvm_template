@@ -3,9 +3,12 @@
 <recipe>
     <@kt.addAllKotlinDependencies />
 
-    <instantiate from="src/app_package/Fragment.kt.ftl"
+    <instantiate from="root/src/app_package/Fragment.kt.ftl"
                    to="${escapeXmlAttribute(srcOut)}/${prefix}Fragment.kt" />
-    <instantiate from="src/app_package/ViewModel.kt.ftl"
+    <instantiate from="root/src/app_package/ViewModel.kt.ftl"
                    to="${escapeXmlAttribute(srcOut)}/${prefix}ViewModel.kt" />
+
+    <instantiate from="root/res/layout/blank_fragment.xml.ftl"
+                   to="${escapeXmlAttribute(resOut)}/${fragment_layout}.xml" />
 
 </recipe>

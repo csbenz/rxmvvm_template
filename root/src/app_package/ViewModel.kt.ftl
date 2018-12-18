@@ -1,7 +1,6 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
 import com.swissborg.android.BaseViewModel
-import com.swissborg.android.State
 import com.swissborg.android.ui.markets.MarketsTransformers
 import io.reactivex.Observable
 import io.reactivex.ObservableTransformer

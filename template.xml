@@ -15,6 +15,14 @@
         default="Example"
         help="The prefix id to use for this mvvm template" />
 
+    <parameter
+        id="fragment_layout"
+        name="Fragment layout file name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="fragment_example"
+        help="The name of the file created for the fragment layout" />
+
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

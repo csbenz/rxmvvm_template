@@ -4,22 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import com.github.mikephil.charting.charts.LineChart
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.data.LineData
-import com.github.mikephil.charting.data.LineDataSet
-import com.google.android.material.tabs.TabLayout
-import com.jakewharton.rxbinding2.view.clicks
 import com.swissborg.android.R
 import com.swissborg.android.di.Injectable
 import com.swissborg.android.ui.base.BaseFragment
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
-import java.util.*
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 <#if applicationPackage??>
