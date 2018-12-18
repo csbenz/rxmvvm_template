@@ -9,6 +9,6 @@
                    to="${escapeXmlAttribute(srcOut)}/${prefix}ViewModel.kt" />
 
     <instantiate from="root/res/layout/blank_fragment.xml.ftl"
-                   to="${escapeXmlAttribute(resOut)}/${fragment_layout}.xml" />
+                   to="${escapeXmlAttribute(resOut)}/layout/${fragment_layout}.xml" />
 
 </recipe>

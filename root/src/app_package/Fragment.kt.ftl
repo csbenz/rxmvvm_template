@@ -33,7 +33,7 @@ class ${prefix}Fragment : BaseFragment(), Injectable {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        return inflater.inflate(R.layout.fragment_${prefix}, container, false)
+        return inflater.inflate(R.layout.${fragment_layout}, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
