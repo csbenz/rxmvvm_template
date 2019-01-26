@@ -23,6 +23,13 @@
         default="fragment_example"
         help="The name of the file created for the fragment layout" />
 
+    <parameter
+        id="event"
+        name="Event name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="DummyEvent"
+        help="The name of an UiEvent to setup in the ViewModel" />
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />

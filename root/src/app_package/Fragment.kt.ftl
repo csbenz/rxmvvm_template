@@ -6,12 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import com.swissborg.android.R
 import com.swissborg.android.di.Injectable
 import com.swissborg.android.ui.base.BaseFragment
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
-
 <#if applicationPackage??>
 import ${applicationPackage}.R
 </#if>
@@ -61,7 +59,7 @@ class ${prefix}Fragment : BaseFragment(), Injectable {
     }
 
     override fun screenName(): String? {
-        // TODO
+        return "" // TODO
     }
 
     private fun bind() {

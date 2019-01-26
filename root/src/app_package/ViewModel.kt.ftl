@@ -12,6 +12,7 @@ class ${prefix}ViewModel @Inject constructor(private val transformers: MarketsTr
     companion object {
         fun reduce(previousState: UiModel, newData: Any): UiModel {
             return when (newData) {
+                is ${event} -> previousState.copy()
                 else -> previousState
             }
         }
@@ -30,7 +31,7 @@ class ${prefix}ViewModel @Inject constructor(private val transformers: MarketsTr
     override fun eventsToUiModelsTransformer(): ObservableTransformer<UiEvent, UiModel> {
         return ObservableTransformer { upstream ->
             upstream.publish { shared ->
-                Observable.merge(Observable.empty(),
+                Observable.merge(shared.ofType(${event}::class.java),
                                 Observable.empty())
             }.scan(UiModel()) { newModel, resultOrEvent ->
                 reduce(newModel, resultOrEvent)
@@ -42,14 +43,14 @@ class ${prefix}ViewModel @Inject constructor(private val transformers: MarketsTr
         val sharedUiModel = uiModelObservable().share()
 
         uiModelObservables = UiModelObservable()
-        )
     }
 
-    data class UiModel() : BaseViewModel.UiModelRepr()
+    data class UiModel(val dummyString: String) : BaseViewModel.UiModelRepr()
 
     data class UiModelObservable()
 
     sealed class UiEvent : BaseViewModel.UiEventRepr() {
         // TODO
+        object ${event}: UiEvent()
     }
 }
